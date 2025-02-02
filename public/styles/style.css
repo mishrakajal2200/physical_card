@@ -1,0 +1,156 @@
+.bg-image{
+    background-image: url("/images/bg3.webp");
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+  .card-horizontal {
+    display: flex;
+    flex-direction: row;
+  }
+  .product-image {
+    max-width: 60px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 8px;
+  }
+
+  .card {
+    transition: all 0.6s ease-in-out; /* Smooth transition for all properties */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slightly scale the card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+    opacity: 0.95; /* Slight opacity change */
+  }
+  @media (max-width: 768px) {
+    .bg-image{
+      background-color: #282726;
+    }
+    .username{
+      color: black;
+    }
+    .custom-icon-location{
+      padding: 6px;
+      width: 30px;        /* Set width */
+      height: 30px;       /* Set height */
+      background-color: white;
+      color: white;
+      border-radius: 50%; /* Makes the background a circle */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .custom-icon-email{
+      padding: 1px;
+      width: 30px;        /* Set width */
+      height: 30px;       /* Set height */
+      background-color: white;
+      color: white;
+      border-radius: 50%; /* Makes the background a circle */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .custom-icon-website{
+      padding: 10px;
+      width: 30px;        /* Set width */
+      height: 30px;       /* Set height */
+      background-color: white;
+      color: white;
+      border-radius: 50%; /* Makes the background a circle */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .custom-icon-contact{
+      padding: 1px;
+      width: 30px;        /* Set width */
+      height: 30px;       /* Set height */
+      background-color: white;
+      color: white;
+      border-radius: 50%; /* Makes the background a circle */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .custom-icon-whatsaap{
+      padding: 1px;
+      width: 30px;        /* Set width */
+      height: 30px;       /* Set height */
+      background-color:white;
+      color: white;
+      border-radius: 50%; /* Makes the background a circle */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .custom-icon-google{
+      padding: 6px;
+      width: 30px;        /* Set width */
+      height: 30px;       /* Set height */
+      background-color: white;
+      color: white;
+      border-radius: 50%; /* Makes the background a circle */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .custom-name{
+      color: #282726;
+    }
+    .product-image {
+      max-width: 20%;  /* Adjust the width as needed */
+      height: auto;    /* Maintain aspect ratio */
+      object-fit: cover;  /* Ensures the image fits well */
+  }
+  .custom-price{
+   color: white;
+   font-size: 15px;
+  }
+  .custom-type{
+    color: white;
+    font-size: 15px;
+  }
+  .custom-heading{
+    color: white;
+  }
+  .custom-name{
+    color: rgb(16, 15, 15);
+    justify-content: center;
+    align-items: center;
+  }
+  }
+  /* Typewriter effect */
+  .typewriter {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    border-right: 1px solid white;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(14) infinite, blink 0.75s step-end infinite;
+  }
+
+  /* Keyframes for typing animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    10% {
+      border-color: transparent;
+    }
+  }

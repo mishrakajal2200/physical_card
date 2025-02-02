@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional PDF Visiting Card</title>
+
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Optional: Font Awesome for social icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="/styles/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <div class="container my-5">
+      <div class="card col-lg-10 col-12 bg-image d-flex flex-column shadow-lg rounded mx-auto p-3">
+        <div class="row flex-column flex-md-row">
+          <!-- Left Section (Info) -->
+          <div class="col-md-6 col-12 d-flex flex-column justify-content-center text-center text-md-left p-3 mx-md-0 mx-auto">
+            <h2 class="text-primary font-weight-bold text-wrap companyName mb-3">
+              <%= companyName %>
+            </h2>
+            <p class="text-warning typewriter animate-slideIn delay-1000 mb-4">
+              <span class="custom-name"><%= userName %></span>
+            </p>
+          
+            <div class="text-left">
+              <!-- Each line with icon and text aligned horizontally -->
+              <p class="d-flex align-items-center mb-2">
+                <i class="fas fa-map-marker-alt text-primary custom-icon-location"></i>
+                <strong class="text-white ml-2"><%= location %></strong>
+              </p>
+              <p class="d-flex align-items-center mb-2">
+                <i class="fas fa-envelope text-danger custom-icon-email"></i>
+                <strong class="text-white ml-2"><%= email %></strong>
+              </p>
+              <p class="d-flex align-items-center mb-2">
+                <i class="fas fa-globe text-success custom-icon-website"></i>
+                <strong class="text-white ml-2 text-break"><%= website %></strong>
+              </p>
+              <p class="d-flex align-items-center mb-2">
+                <i class="fas fa-phone-alt text-info custom-icon-contact"></i>
+                <strong class="text-white ml-2"><%= contacts %></strong>
+              </p>
+              <p class="d-flex align-items-center mb-2">
+                <i class="fab fa-whatsapp text-warning custom-icon-whatsaap"></i>
+                <strong class="text-white ml-2"><%= Watsapps %></strong>
+              </p>
+              <p class="d-flex align-items-center mb-2">
+                <i class="fas fa-map text-success custom-icon-google"></i>
+                <strong class="text-white ml-2 text-break"><%= googleMap %></strong>
+              </p>
+            </div>
+          </div>
+          
+          
+    
+          <!-- Right Section (Social Media Links and Products) -->
+          <div class="col-md-6 col-12 p-3">
+            <!-- Products -->
+            <h4 class="text-primary text-center">Our Products</h4>
+            <div class="row justify-content-center">
+                <% products.forEach((product, index) => { %>
+                <div class="col-6 col-sm-4 col-12 text-center">
+                    <div class="border-bottom py-2">
+                        <h5 class="text-wrap mb-1 custom-heading"><%= product.productName %></h5>
+                        <p class="mb-1">
+                            <strong class="text-success">Price:</strong> <span class="custom-price"><%= product.productPrice %></span>
+                        </p>
+                        <p class="mb-1">
+                            <strong class="text-danger">Type:</strong><span class="custom-type"><%= product.productType %></span>
+                        </p>
+                        <% if (product.productImages.length > 0) { %>
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <% product.productImages.forEach(image => { %>
+                            <img class="img-fluid mb-2" src="<%= image %>" alt="<%= product.productName %>"/>
+                            <% }) %>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+        
+            <!-- Social Media Links -->
+            <div class="d-flex justify-content-center mt-2">
+                <% if (socialMediaLinks.facebook) { %>
+                <a href="<%= socialMediaLinks.facebook %>" target="_blank" class="btn btn-outline-primary btn-sm mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <% } %>
+                <% if (socialMediaLinks.instagram) { %>
+                <a href="<%= socialMediaLinks.instagram %>" target="_blank" class="btn btn-outline-danger btn-sm mx-1">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <% } %>
+                <% if (socialMediaLinks.youtubeChannel) { %>
+                <a href="<%= socialMediaLinks.youtubeChannel %>" target="_blank" class="btn btn-outline-danger btn-sm mx-1">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <% } %>
+                <% if (socialMediaLinks.googleBusiness) { %>
+                <a href="<%= socialMediaLinks.googleBusiness %>" target="_blank" class="btn btn-outline-success btn-sm mx-1">
+                    <i class="fab fa-google"></i>
+                </a>
+                <% } %>
+            </div>
+        </div>
+        
+        
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Bootstrap and FontAwesome JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
